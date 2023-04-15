@@ -23,6 +23,18 @@
           font-size: 3.5rem;
         }
       }
+
+      .img-human{
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        object-fit: contain;
+        object-position: center;
+      }
+
     </style>
 
     
@@ -128,50 +140,57 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-      <div class="col-lg-4">
-<!--        将text标签更改为image 可插入图片-->
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="heart.html"><image xlink:href="images/heart.png" width="100%" height="100%"/></a></svg>
+        <div class="img-human" style="text-align: center;">
+            <img src="images/human.png" style="height:80%; width:80%;" alt="1" usemap="#example-map">
 
-        <h2>Heart</h2>
-        <p>Pumps blood, supplying oxygen and nutrients.</p>
-        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/lungs.png" width="100%" height="100%"/></svg>
+            <map name="example-map">
+              <area shape="circle" coords="180,100,80" href="#" alt="Clickable Area">
+            </map>
 
-        <h2>Lung</h2>
-        <p>Facilitate gas exchange, oxygenate blood.</p>
-        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/liver.png" width="100%" height="100%"/></svg>
+        </div>
+<!--      <div class="col-lg-4">-->
+<!--&lt;!&ndash;        将text标签更改为image 可插入图片&ndash;&gt;-->
+<!--          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="heart.html"><image xlink:href="images/heart.png" width="100%" height="100%"/></a></svg>-->
 
-        <h2>Liver</h2>
-        <p>Detoxifies, metabolizes, produces proteins.</p>
-        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/kidney.png" width="100%" height="100%"/></svg>
+<!--        <h2>Heart</h2>-->
+<!--        <p>Pumps blood, supplying oxygen and nutrients.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+<!--      <div class="col-lg-4">-->
+<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/lungs.png" width="100%" height="100%"/></svg>-->
 
-        <h2>Kidney</h2>
-        <p>Filter blood, regulate electrolytes, excrete waste.</p>
-        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/stomach.png" width="100%" height="100%"/></svg>
+<!--        <h2>Lung</h2>-->
+<!--        <p>Facilitate gas exchange, oxygenate blood.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+<!--      <div class="col-lg-4">-->
+<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/liver.png" width="100%" height="100%"/></svg>-->
 
-        <h2>Stomache</h2>
-        <p>Digests food, breaks down proteins.</p>
-        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/spleen.png" width="100%" height="100%"/></svg>
+<!--        <h2>Liver</h2>-->
+<!--        <p>Detoxifies, metabolizes, produces proteins.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+<!--       <div class="col-lg-4">-->
+<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/kidney.png" width="100%" height="100%"/></svg>-->
 
-        <h2>Others</h2>
-        <p>Other organs in human body.</p>
-        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+<!--        <h2>Kidney</h2>-->
+<!--        <p>Filter blood, regulate electrolytes, excrete waste.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+<!--       <div class="col-lg-4">-->
+<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/stomach.png" width="100%" height="100%"/></svg>-->
+
+<!--        <h2>Stomache</h2>-->
+<!--        <p>Digests food, breaks down proteins.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+<!--       <div class="col-lg-4">-->
+<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/spleen.png" width="100%" height="100%"/></svg>-->
+
+<!--        <h2>Others</h2>-->
+<!--        <p>Other organs in human body.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;--><!-- /.row -->
 
 
     <!-- START THE FEATURETTES -->
@@ -180,7 +199,7 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Statistics and analysis of organ fabrication research. <span class="text-muted">Find whatever you want.</span></h2>
+        <h2 class="featurette-heading">Statistics and analysis of organ fabrication research.</h2>
         <p class="lead">Identify the most frequently used manufacturing strategy and units.</p>
       </div>
       <div class="col-md-5">
@@ -193,7 +212,7 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Beneficial machine-learning-based models to facilitate fabrication process.<span class="text-muted">Try it.</span></h2>
+        <h2 class="featurette-heading">Beneficial machine-learning-based models to facilitate fabrication process.</h2>
         <p class="lead">Simple but valuable regression models to help you optimize the parameters in fabricating tissues/organs.</p>
       </div>
       <div class="col-md-5 order-md-1">
@@ -206,7 +225,7 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">All you want to know about biomaterials. <span class="text-muted">Check it.</span></h2>
+        <h2 class="featurette-heading">All you want to know about biomaterials.</h2>
         <p class="lead">We provide detailed information of common biomaterials, such as mechanical and rheological property, modulus and viscoelasticity.</p>
       </div>
       <div class="col-md-5">
