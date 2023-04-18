@@ -48,11 +48,7 @@
             <a class="nav-link" href="https://gulab.info/about/">About</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" onmouseover="this.style.backgroundColor='black';" onmouseout="this.style.backgroundColor='';"
-                  type="submit" style="color:white">Search</button>
-        </form>
+
       </div>
     </div>
   </nav>
@@ -64,10 +60,10 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <div class="sb-sidenav-menu-heading">Statistics</div>
                             <a class="nav-link" href="heart.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Heart
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-pie"></i></div>
+                                Components
                             </a>
                             <div class="sb-sidenav-menu-heading">Knowledge analysis</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -149,7 +145,7 @@
                                 <i class="fas fa-chart-area me-1"></i>
                                 Statistic of Cells
                             </div>
-                            <div class="card-body"><canvas id="Area-heart" width="100%" height="30"></canvas></div>
+                            <div class="card-body"><canvas id="Area-heart" width="100%" height="30%"></canvas></div>
                         </div>
 
                          <!-- 此处插入世界map !-->
@@ -416,8 +412,12 @@
             </div>
         </div>
 
-        <script type="text/javascript">
+<script type="text/javascript">
 
+// 无需引入额外的js文件
+// Interface Connection
+    let parameter = { param: 'heart' }
+        axios.all([
             axios.get('http://data.iscr.ac.cn/mm-api/BiologicalStemCell/search/list',
                 <!-- 此处limit的值可以设为一个非常大的数字 超过部分的数据不会传输 只会传输最大的数据值 -->
                 { params: {page:1, limit:528, param:'heart'}})
@@ -435,12 +435,153 @@
             container.innerHTML = template(jsonlist);
             //为Table创建表格样式架构
             $('#Table_heart').DataTable({order: [[2, 'desc']],});
+            }),
+
+
+        // Pie Chart
+        axios.get('http://data.iscr.ac.cn/mm-api/BiologicalStemCell/statistics/manufacturingStrategy',
+            { params: parameter})
+            .then(res=>{
+                // 接口数据
+                console.log(res)
+                let label_strategy = res.data.data['axis'];
+                let count_strategy = res.data.data['data'];
+
+        var ctx = document.getElementById("Pie-heart");
+        var myPieChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: label_strategy,
+            datasets: [{
+              data: count_strategy,
+              backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+            }],
+          },
+        })
+
+        // Bar Chart
+        axios.get('http://data.iscr.ac.cn/mm-api/BiologicalStemCell/statistics/materials',
+            { params: parameter})
+            .then(res=> {
+              // 接口数据
+              console.log(res)
+              let label_material = res.data.data['axis'];
+              let count_material = res.data.data['data'];
+
+              var ctx = document.getElementById("Bar-heart");
+              var myLineChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  labels: label_material.slice(0, 10), // 使用slice切片 选择数量最多的前十个
+                  datasets: [{
+                    label: 'count',
+                    backgroundColor: ['#28c7fa', '#ff006c', '#47d6b6', '#f96d00', '#9c1de7',
+                      '#fef200', '#39bdc8', '#7a57d1', '#fc5185', '#575151'],
+                    data: count_material,
+                  }],
+                },
+                options: {
+                  scales: {
+                    xAxes: [{
+                      time: {
+                        unit: 'materials'
+                      },
+                      gridLines: {
+                        display: false
+                      },
+                      ticks: {
+                        maxTicksLimit: 10
+                      }
+                    }],
+                    yAxes: [{
+                      ticks: {
+                        min: 0,
+                        max: 60,
+                        maxTicksLimit: 10
+                      },
+                      gridLines: {
+                        display: true
+                      }
+                    }],
+                  },
+                  legend: {
+                    display: false
+                  }
+                }
+              });
             })
 
+          // Area Chart
+          axios.get('http://data.iscr.ac.cn/mm-api/BiologicalStemCell/statistics/cell',
+            { params: parameter})
+            .then(res=> {
+              // 接口数据
+              console.log(res)
+              let label_cell = res.data.data['axis'];
+              let count_cell = res.data.data['data'];
+              var ctx = document.getElementById("Area-heart");
+              var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: label_cell.slice(0, 12),  // 使用slice切片 选择数量最多的前十个
+                  datasets: [{
+                    label: "count",
+                    lineTension: 0.3,
+                    backgroundColor: ['#28c7fa', '#ff006c', '#47d6b6', '#f96d00', '#9c1de7',
+                      '#fef200', '#39bdc8', '#7a57d1', '#fc5185', '#575151', '#28c7fa', '#ff006c'],
+                    borderColor: "#00d8b1",
+                    pointRadius: 5,
+                    pointBackgroundColor:['#28c7fa', '#ff006c', '#47d6b6', '#f96d00', '#9c1de7',
+                      '#fef200', '#39bdc8', '#7a57d1', '#fc5185', '#575151', '#28c7fa', '#ff006c'],
+                    pointBorderColor: "rgba(255,255,255,0.8)",
+                    pointHoverRadius: 1,
+                    pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                    pointHitRadius: 50,
+                    pointBorderWidth: 2,
+                    data: count_cell,
+                    fill: false,
+                  }],
+                },
+                options: {
+                  scales: {
+                    xAxes: [{
+                      time: {
+                        unit: 'date'
+                      },
+                      gridLines: {
+                        display: false
+                      },
+                      ticks: {
+                        maxTicksLimit: 16
+                      }
+                    }],
+                    yAxes: [{
+                      ticks: {
+                        min: 0,
+                        max: 200,
+                        maxTicksLimit: 5
+                      },
+                      gridLines: {
+                        color: "rgba(0, 0, 0, .125)",
+                      }
+                    }],
+                  },
+                  legend: {
+                    display: false
+                  }
+                }
+              });
+            })
+
+                 .catch(error=>{
+                // 连接接口失败抛出错误
+            })
+                })
+        ])
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="Visualization/heart.js"></script>
+<!--        <script src="Visualization/heart.js"></script>-->
     </body>
 </html>
