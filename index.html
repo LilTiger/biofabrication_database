@@ -17,6 +17,14 @@
         -moz-user-select: none;
         user-select: none;
       }
+      .bd-placeholder-a{
+          color: initial;
+          text-decoration: none;
+      }
+      .bd-placeholder-a:hover{
+          color: initial;
+          text-decoration:underline
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -144,54 +152,64 @@
             <img src="images/human.png" style="height:80%; width:80%;" alt="1" usemap="#example-map">
 
             <map name="example-map">
-              <area shape="circle" coords="180,100,80" href="#" alt="Clickable Area">
-              <area shape="circle" coords="820,480,70" href="heart.html" alt="Clickable Area">
+              <area shape="circle" coords="180,100,80" href="javascript:void(0);" onclick="enterPage('Nasopharynx')" alt="Clickable Area">
+              <area shape="circle" coords="820,480,70" href="javascript:void(0);" onclick="enterPage('Heart')" alt="Clickable Area">
+              <area shape="circle" coords="240,240,70" href="javascript:void(0);" onclick="enterPage('lungs')" alt="Clickable Area">
+              <area shape="circle" coords="120,350,90" href="javascript:void(0);" onclick="enterPage('Liver')" alt="Clickable Area">
+              <area shape="circle" coords="210,510,80" href="javascript:void(0);" onclick="enterPage('KIDNEYS')" alt="Clickable Area">
+              <area shape="circle" coords="110,670,80" href="javascript:void(0);" onclick="enterPage('PANCREAS')" alt="Clickable Area">
+              <area shape="circle" coords="225,830,85" href="javascript:void(0);" onclick="enterPage('BLADDER')" alt="Clickable Area">
+              <area shape="circle" coords="845,90,85"  href="javascript:void(0);" onclick="enterPage('BRAIN')" alt="Clickable Area">
+              <area shape="circle" coords="800,250,70" href="javascript:void(0);" onclick="enterPage('THYROID')" alt="Clickable Area">
+              <area shape="circle" coords="915,360,70" href="javascript:void(0);" onclick="enterPage('THYMUS GLAND')" alt="Clickable Area">
+              <area shape="circle" coords="930,590,80" href="javascript:void(0);" onclick="enterPage('STOMACH')" alt="Clickable Area">
+              <area shape="circle" coords="877,757,82" href="javascript:void(0);" onclick="enterPage('INTESTINES')" alt="Clickable Area">
+              <area shape="circle" coords="622,838,65" href="javascript:void(0);" onclick="enterPage('REPRODUCTIVE SYSTEM')" alt="Clickable Area">
             </map>
 
         </div>
 <!--      <div class="col-lg-4">-->
 <!--&lt;!&ndash;        将text标签更改为image 可插入图片&ndash;&gt;-->
-<!--          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="heart.html"><image xlink:href="images/heart.png" width="100%" height="100%"/></a></svg>-->
+<!--          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="javascript:void(0);" onclick="enterPage('Heart')"><image xlink:href="images/heart.png" width="100%" height="100%"/></a></svg>-->
 
-<!--        <h2>Heart</h2>-->
-<!--        <p>Pumps blood, supplying oxygen and nutrients.</p>-->
-<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--          <h2><a class="bd-placeholder-a" href="javascript:void(0);" onclick="enterPage('Heart')">Heart</a></h2>-->
+<!--        <p>This is the first column.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="enterPage('Heart')">View details &raquo;</a></p>-->
 <!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
 <!--      <div class="col-lg-4">-->
-<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/lungs.png" width="100%" height="100%"/></svg>-->
-
-<!--        <h2>Lung</h2>-->
-<!--        <p>Facilitate gas exchange, oxygenate blood.</p>-->
-<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="javascript:void(0);" onclick="enterPage('Lung')"><image xlink:href="images/lungs.png" width="100%" height="100%"/></a></svg>-->
+<!--          <h2><a class="bd-placeholder-a" href="javascript:void(0);" onclick="enterPage('Lung')">Lung</a></h2>-->
+<!--        <p>This is the second column.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="enterPage('Lung')">View details &raquo;</a></p>-->
 <!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
 <!--      <div class="col-lg-4">-->
-<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/liver.png" width="100%" height="100%"/></svg>-->
+<!--          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="javascript:void(0);" onclick="enterPage('Liver')"><image xlink:href="images/liver.png" width="100%" height="100%"/></a></svg>-->
 
-<!--        <h2>Liver</h2>-->
-<!--        <p>Detoxifies, metabolizes, produces proteins.</p>-->
-<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--          <h2><a class="bd-placeholder-a" href="javascript:void(0);" onclick="enterPage('Liver')">Liver</a></h2>-->
+<!--        <p>This is the third column.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="enterPage('Liver')">View details &raquo;</a></p>-->
 <!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
 <!--       <div class="col-lg-4">-->
-<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/kidney.png" width="100%" height="100%"/></svg>-->
+<!--           <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="javascript:void(0);" onclick="enterPage('Kidney')"><image xlink:href="images/kidney.png" width="100%" height="100%"/></a></svg>-->
 
-<!--        <h2>Kidney</h2>-->
-<!--        <p>Filter blood, regulate electrolytes, excrete waste.</p>-->
-<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--           <h2><a class="bd-placeholder-a" href="javascript:void(0);" onclick="enterPage('Kidney')">Kidney</a></h2>-->
+<!--        <p>This is the fourth column.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="enterPage('Kidney')">View details &raquo;</a></p>-->
 <!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
 <!--       <div class="col-lg-4">-->
-<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/stomach.png" width="100%" height="100%"/></svg>-->
-
-<!--        <h2>Stomache</h2>-->
-<!--        <p>Digests food, breaks down proteins.</p>-->
-<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
+<!--           <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="javascript:void(0);" onclick="enterPage('Stomache')"><image xlink:href="images/stomach.png" width="100%" height="100%"/></a></svg>-->
+<!--           <h2><a class="bd-placeholder-a" href="javascript:void(0);" onclick="enterPage('Stomache')">Stomache</a></h2>-->
+<!--        <p>This is the fifth column.</p>-->
+<!--        <p><a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="enterPage('Stomache')">View details &raquo;</a></p>-->
 <!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
-<!--       <div class="col-lg-4">-->
-<!--        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image xlink:href="images/spleen.png" width="100%" height="100%"/></svg>-->
+<!--        <div class="col-lg-4">-->
+<!--            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><a href="javascript:void(0);" onclick="enterPage('Other')"><image xlink:href="images/other.png" width="100%" height="100%"/></a></svg>-->
+<!--            <h2><a class="bd-placeholder-a" href="javascript:void(0);" onclick="enterPage('Other')">Other</a></h2>-->
+<!--            <p>This is the sixth column.</p>-->
+<!--            <p><a class="btn btn-outline-secondary" href="javascript:void(0);" onclick="enterPage('Other')">View details &raquo;</a></p>-->
+<!--        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
 
-<!--        <h2>Others</h2>-->
-<!--        <p>Other organs in human body.</p>-->
-<!--        <p><a class="btn btn-outline-secondary" href="#">View details &raquo;</a></p>-->
-<!--      </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;--><!-- /.row -->
+<!--    </div>&lt;!&ndash; /.row &ndash;&gt;-->
 
 
     <!-- START THE FEATURETTES -->
@@ -266,5 +284,13 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+      function enterPage(organ){
+          let s='?s='+organ;
+          if (organ==='Other')
+              s='';
+          window.location.href= 'heart.html'+s;
+      }
+  </script>
   </body>
 </html>
