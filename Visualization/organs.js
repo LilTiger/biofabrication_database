@@ -18,7 +18,7 @@ if (organ===null)
                     let label_strategy = res.data.data['axis'];
                     let count_strategy = res.data.data['data'];
 
-                    var ctx = document.getElementById("Pie-heart");
+                    var ctx = document.getElementById("Pie");
                     var myPieChart = new Chart(ctx, {
                         type: 'pie',
                         data: {
@@ -39,7 +39,7 @@ if (organ===null)
                             let label_material = res.data.data['axis'];
                             let count_material = res.data.data['data'];
 
-                            var ctx = document.getElementById("Bar-heart");
+                            var ctx = document.getElementById("Bar");
                             var myLineChart = new Chart(ctx, {
                                 type: 'bar',
                                 data: {
@@ -67,7 +67,7 @@ if (organ===null)
                                         yAxes: [{
                                             ticks: {
                                                 min: 0,
-                                                max: 60,
+                                                max: 580,
                                                 maxTicksLimit: 10
                                             },
                                             gridLines: {
@@ -90,7 +90,7 @@ if (organ===null)
                             // console.log(res)
                             let label_cell = res.data.data['axis'];
                             let count_cell = res.data.data['data'];
-                            var ctx = document.getElementById("Area-heart");
+                            var ctx = document.getElementById("Area");
                             var myLineChart = new Chart(ctx, {
                                 type: 'line',
                                 data: {
@@ -129,7 +129,7 @@ if (organ===null)
                                         yAxes: [{
                                             ticks: {
                                                 min: 0,
-                                                max: 200,
+                                                max: 400,
                                                 maxTicksLimit: 5
                                             },
                                             gridLines: {
@@ -177,23 +177,22 @@ if (organ===null)
     }
 
     function searchList(){
+        // 请保持与该接口的值一致 http://data.iscr.ac.cn/mm-api/BiologicalStemCell/search/list
         axios.get('http://10.0.90.170:1688/BiologicalStemCell/search/list',
-            <!-- 此处limit的值可以设为一个非常大的数字 超过部分的数据不会传输 只会传输最大的数据值 -->
-            { params: {page:1, limit:528, param:organ}})
+
+            { params: {page:1, limit:9999, param:organ}})
             .then(res=> {
                 // console.log(res)
                 let jsonlist = res.data.data['dataList'];
-                <!-- 以下为handlebar部分 -->
-                //获取需要放数据的容器
-                var container = document.querySelector('#container');
-                //也就是获取我们定义的模板的dom对象。主要是想获取里面的内容（innerHTML）
-                var templateDom = document.querySelector('#template');
-                //编译模板的里的内容
-                var template = Handlebars.compile(templateDom.innerHTML);
-                //把后台获取到的数据渲染到页面
-                container.innerHTML = template(jsonlist);
-                //为Table创建表格样式架构
-                // new simpleDatatables.DataTable(Table_heart);
+            var container = document.querySelector('#container');
+            //也就是获取我们定义的模板的dom对象 主要是想获取里面的内容（innerHTML）
+            var templateDom = document.querySelector('#template');
+            //编译模板的里的内容
+            var template = Handlebars.compile(templateDom.innerHTML);
+            //把后台获取到的数据渲染到页面
+            container.innerHTML = template(jsonlist);
+            //为Table创建表格样式架构
+            $('#Table_organ').DataTable({order: [[2, 'desc']],});
             })
     }
 
@@ -558,10 +557,14 @@ if (organ===null)
     }
 
     function updateDom(){
-        document.getElementsByClassName('keyword_position')[0].innerHTML= organ;
-        document.getElementsByClassName('keyword_position1')[0].innerHTML= 'There are all you need for fabricating a human '+organ+'.';
-        document.getElementsByClassName('keyword_position2')[0].innerHTML= 'What exactly is a human '+organ+'?';
-        document.getElementsByClassName('keyword_position3')[0].innerHTML= 'What do we print a human '+organ+' for?';
+
+        if (organ!=null) {
+            document.getElementsByClassName('keyword_position')[0].innerHTML = organ;
+            document.getElementsByClassName('keyword_position1')[0].innerHTML = 'Statistics of strategies, biomaterials, cells with respect to countries and institutions in fabricating the human ' + organ + '.';
+        } else {
+            document.getElementsByClassName('keyword_position')[0].innerHTML = 'Organs';
+            document.getElementsByClassName('keyword_position1')[0].innerHTML = 'Statistics of strategies, biomaterials, cells with respect to countries and organizations in fabricating the human organs.';
+        }
     }
 
     function handleSecTopic(){
