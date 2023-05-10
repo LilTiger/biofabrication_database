@@ -39,6 +39,15 @@ if (organ===null)
                             let label_material = res.data.data['axis'];
                             let count_material = res.data.data['data'];
 
+                            // 计算最大值
+                            let max = Math.max(...count_material);
+                            let maxRoundedUp;
+                            if (max <= 100) {
+                                maxRoundedUp =
+                                    Math.ceil(max / 10) * 10;
+                            } else {
+                                maxRoundedUp = Math.ceil(max / 100) * 100;
+                            }
                             var ctx = document.getElementById("Bar");
                             var myLineChart = new Chart(ctx, {
                                 type: 'bar',
@@ -67,7 +76,7 @@ if (organ===null)
                                         yAxes: [{
                                             ticks: {
                                                 min: 0,
-                                                max: 580,
+                                                max: maxRoundedUp,
                                                 maxTicksLimit: 10
                                             },
                                             gridLines: {
@@ -91,6 +100,16 @@ if (organ===null)
                             let label_cell = res.data.data['axis'];
                             let count_cell = res.data.data['data'];
                             var ctx = document.getElementById("Area");
+
+                              // 计算最大值
+                            let max = Math.max(...count_cell);
+                            let maxRoundedUp;
+                            if (max <= 100) {
+                                maxRoundedUp = Math.ceil(max / 10) * 10;
+                            } else {
+                                maxRoundedUp = Math.ceil(max / 100) * 100;
+                            }
+
                             var myLineChart = new Chart(ctx, {
                                 type: 'line',
                                 data: {
@@ -129,7 +148,7 @@ if (organ===null)
                                         yAxes: [{
                                             ticks: {
                                                 min: 0,
-                                                max: 400,
+                                                max: maxRoundedUp,
                                                 maxTicksLimit: 5
                                             },
                                             gridLines: {
