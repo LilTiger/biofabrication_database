@@ -2589,8 +2589,8 @@ function alert(message, type) {
 
 if (alertTrigger) {
   alertTrigger.addEventListener('click', function () {
-    alert('The optimized printing temperature is: 20±1 ℃<br>The optimized printing pressure is: 10±1pa<br>The optimized printing ' +
-        'speed is: 0.1±0.005mm/s', 'success')
+    alert('The optimized printing temperature is: xx ℃<br>The optimized printing pressure is: xx pa<br>The optimized printing ' +
+        'speed is: xx mm/s', 'success')
   })
 }
 
