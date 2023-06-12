@@ -159,33 +159,32 @@
   </div>
 
 
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-
-  <div class="container marketing">
+  <div class="container">
 
     <div class="row">
-     <div class="intro">
+     <div class="intro" style="border-radius:10px">
        Manufacturing Multi-organs (MM) database aims to provide the most useful knowledge in biofabrication.
        <span style="font-size: 20px; font-weight: normal">It demonstrates detailed statistics and analysis based on extensive relevant studies. Furthermore, it also includes user-friendly
        machine learning tools to optimise parameters and predict biological indexes during in vitro organs construction.</span>
      </div>
 
-
-      <div class="alert alert-custom d-inline-flex align-items-center" role="alert">
+      <div class="alert alert-custom d-inline-flex align-items-center" style="border-radius:10px" role="alert">
     <i class="bi bi-info-circle-fill me-2"></i>
-    <div class="col text-center">
-      Click on the organs in the image for more information:
+    <div class="col text-center" >
+      Click on the organ in the human body for more information:
     </div>
   </div>
 
     </div>
     <!-- Three columns of text below the carousel -->
+    <div class="card" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+ <h4 class="card-header" style="font-weight: bold;">
+   <i class="fa-solid fa-person" style="margin-right:1%"></i>Human body diagram
+  </h4>
     <div class="row">
+
         <div class="img-human" style="text-align: center;">
-            <img src="images/human.png" style="height:80%; width:80%;" alt="1" usemap="#example-map">
+            <img class="card-img-top" src="images/human.png" style="height:80%; width:80%;" alt="1" usemap="#example-map">
 
             <map name="example-map">
               <area shape="circle" coords="180,100,80" href="javascript:void(0);" onclick="enterPage('Pharynx And Larynx')" alt="Clickable Area">
@@ -202,15 +201,53 @@
               <area shape="circle" coords="877,757,82" href="javascript:void(0);" onclick="enterPage('INTESTINES')" alt="Clickable Area">
               <area shape="circle" coords="622,838,65" href="javascript:void(0);" onclick="enterPage('REPRODUCTIVE SYSTEM')" alt="Clickable Area">
             </map>
+
         </div>
-  </div><!-- /.container -->
+       </div>
+      </div>
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
 
-<div class="card" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
-  <h4 class="card-header" style="font-weight: bold;color:royalblue">
-    <i class="fa-solid fa-chart-simple" style="margin-right:1%"></i>Knowledge analysis
+  <div class="card" style="box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+  <h4 class="card-header" style="font-weight: bold;">
+    <i class="fa-solid fa-chart-simple" style="margin-right:1%"></i>Statistics
+  </h4>
+  <div class="card-body" style="padding: 36px;">
+    <div class="row justify-content-center">
+      <div class="col-auto text-center">
+          <div style="width: 160px; margin: auto;"><i class="fa-solid fa-lungs fa-7x" style="margin:20px;color:darkred"></i></div>
+        <p class="h5 ms-3 mb-0" style="font-size: 26px; font-family: Arial, sans-serif;"><strong>37 </strong>Human Organs</p>
+      </div>
+
+      <div class="col-auto text-center">
+          <div style="width: 130px; margin: auto;"><i class="fa-solid fa-microchip fa-7x" style="margin:20px"></i></div>
+        <p class="h5 ms-3 mb-0" style="font-size: 26px; font-family: Arial, sans-serif;"><strong>4 </strong>Strategies</p>
+      </div>
+
+      <div class="col-auto text-center">
+          <div style="width: 160px; margin: auto;"><i class="fa-solid fa-flask-vial fa-7x" style="margin:20px;color:green"></i></div>
+        <p class="h5 ms-3 mb-0" style="font-size: 26px; font-family: Arial, sans-serif;"><strong>64 </strong>Biomaterials</p>
+      </div>
+
+      <div class="col-auto text-center">
+          <div style="width: 130px; margin: auto;"><i class="fa-solid fa-vial-virus fa-7x" style="margin:20px;color:lightseagreen"></i></div>
+        <p class="h5 ms-3 mb-0" style="font-size: 26px; font-family: Arial, sans-serif;"><strong>124 </strong>Cells</p>
+      </div>
+
+<!--      若添加元素 复制下列注释部分即可-->
+<!--      <div class="col-auto text-center">-->
+<!--          <div style="width: 80px; margin: auto;"><i class="fas fa-chart-area fa-4x"></i></div>-->
+<!--          <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">Tendency</p>-->
+<!--      </div>-->
+
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:2%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+  <h4 class="card-header" style="font-weight: bold;">
+    <i class="fa-solid fa-magnifying-glass-chart" style="margin-right:1%"></i>Knowledge analysis
   </h4>
   <div class="card-body" style="padding: 36px;">
     <div class="row row-cols-2 g-4">
@@ -241,6 +278,24 @@
     </div>
   </div>
 </div>
+
+<div class="card" style="margin-top:2%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+  <h4 class="card-header" style="font-weight: bold;">
+    <i class="fa-solid fa-link" style="margin-right:1%"></i>Links
+  </h4>
+  <div class="card-body" style="padding: 36px;">
+    <div class="row row-cols-2 g-4">
+      <div class="col">
+        <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+          <div style="width: 80px;"><i class="fas fa-chart-area fa-4x"></i></div>
+          <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">Tendency in the development of Biofabrication</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 
@@ -277,13 +332,13 @@
 
 
       <div style="margin-left: 3%">
-      <h3>Contact</h3>
+        <h3><strong>Contact</strong></h3>
         <p><strong>Address:</strong> #3 Datun Road, Chaoyang District, <br> Beijing 100101, P.R.China</p>
       <p><strong>Phone:</strong> +86-10-64807315</p>
       <p><strong>Email:</strong> qgu@ioz.ac.cn</p>
       </div>
       <div style="margin-left: 4%">
-          <h3>Follow us</h3>
+        <h3><strong>Follow us</strong></h3>
           <img style="width:auto; height:132px; " src="images/follow.png">
       </div>
         <div class="text-muted" style=" position:absolute; bottom: 0.5%">Copyright &copy; Group of Bioinspired Engineering 2023</div>
@@ -297,7 +352,7 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript"
+  <script type="text/javascript">
       function enterPage(organ){
           let s='?s='+organ;
           if (organ==='Other')
