@@ -1,0 +1,182 @@
+html {
+  background: #F8F8F8;
+}
+
+body {
+  color: #4D5D75;
+}
+
+#app {
+  //min-width: 1180px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  //width: 90%;
+  //width: 1180px;
+
+}
+
+img {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*省略号*/
+.ellipsis1,
+.ellipsis2,
+.ellipsis3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ellipsis1 {
+  -webkit-line-clamp: 1;
+}
+
+.ellipsis2 {
+  -webkit-line-clamp: 2;
+}
+
+.ellipsis3 {
+  -webkit-line-clamp: 3;
+}
+
+.home-bg {
+  position: absolute;
+  left: 50%;
+  top: -60;
+  transform: translate(-50%, 0%);
+  background-position: 0 0 ;
+  height: 822px;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.common-bg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  height: 516px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.breadcrumb {
+  padding: 19px 25px;
+  background: #FFFFFF;
+  font-size: 16px;
+  color: rgba(77, 93, 117, 1);
+}
+
+.col-blue{
+  color: #3A81F3;
+}
+
+
+.pagination {
+  margin: 30px auto 0;
+  background: #FFFFFF;
+  border-radius: 7px;
+  border: 1px solid rgba(77, 93, 117, 0.5);
+  display: inline-block;
+  padding: 9px;
+  color: #4D5D75;
+
+  /deep/ .el-pager li {
+    padding: 0;
+    min-width: 50px;
+    font-size: 16px;
+  }
+
+  /deep/ button {
+    font-size: 16px;
+  }
+
+  /deep/ .btn-next {
+    padding-left: 18px;
+  }
+
+  /deep/ .btn-next[disabled=disabled] {
+    border-left: 1px solid #D6D9DE;
+  }
+
+  /deep/ .btn-prev {
+    padding-right: 18px;
+  }
+
+  /deep/ .btn-prev[disabled=disabled] {
+    border-right: 1px solid #D6D9DE;
+  }
+}
+
+.paper-sort {
+  color: #4D5D75;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+
+  .icon-sort {
+    width: 21px;
+    height: 19px;
+    margin-right: 10px;
+  }
+}
+.point{
+  font-size: 22px;
+  font-weight: 600;
+  color: #4D5D75;
+  line-height: 30px;
+  padding: 5px 20px 19px 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(77, 93, 117, 0.15);
+}
+.point:after{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 6px;
+  height: 25px;
+  background: #3EB3F1;
+  border-radius: 2px;
+  top:5px;
+  left:0;
+}
+a{
+  text-decoration: none;
+  color: #4d5d75
+}
