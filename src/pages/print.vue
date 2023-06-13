@@ -19,7 +19,7 @@
                 <a class="nav-link" @click="routePush('/models')">Models</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Materials</a>
+                <a class="nav-link" @click="routePush('/materials')">Materials</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://gulab.info/about/">About</a>
