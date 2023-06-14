@@ -35,12 +35,12 @@
       </nav>
     </header>
 
-    <div style="display: flex;margin-top:2%">
+    <div style="display: flex;margin-top:6%">
       <img src="../assets/images/organs.jpg" style="margin-left:7%;width: 40%;">
       <img src="../assets/images/palm.png" style="margin-left:5%;width: 40%;">
     </div>
 
-    <div class="container-fluid" style="margin-top: 70px; width: 500px; height: 500px;">
+    <div class="container-fluid" style="margin-top: 2.5%; width: 500px; height: 500px;">
       <p style="font-size: x-large">What do you want to print?</p>
       <select class="form-select form-select-lg mb-3" aria-label="Default select example">
         <option selected>Please select</option>

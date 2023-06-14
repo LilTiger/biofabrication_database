@@ -34,8 +34,8 @@
         </div>
       </nav>
     </header>
-    <div style="position: relative">
-      <div class="card mb-3" style="margin-top:8%;margin-left: 3%; width: 46%; float:left">
+    <div style="position: relative; margin-top:8%">
+      <div class="card mb-3" style="margin-left: 3%; width: 46%; float:left">
         <a @click="routePush('/print')"><img src="../assets/images/models.png" style='width:89.8%' class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h3 class="card-title">Optimised printing parameters prediction model</h3>
@@ -43,7 +43,7 @@
           <p class="card-text"><small class="text-muted">Algorithm: GBDT (Gradient Boosting Decision Tree)</small></p>
         </div>
       </div>
-      <div class="card mb-3" style="margin-top:8%; margin-right:3%; width:46%;float: right">
+      <div class="card mb-3" style="margin-right:3%; width:46%;float: right">
         <a @click="routePush('/predict')"><img src="../assets/images/xgboost.png" class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h3 class="card-title">Liver functional indexes analysis and prediction Model</h3>

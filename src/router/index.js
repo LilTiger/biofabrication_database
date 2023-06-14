@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '@/pages/index/index'
 import Models from '@/pages/models'
+import Materials from '@/pages/materials'
 import Predict from '@/pages/predict'
 import Print from '@/pages/print'
 import Organs from '@/pages/organs'
@@ -34,6 +35,11 @@ export default new VueRouter({
       path: '/models',
       name: 'models',
       component: Models
+    },
+     {
+      path: '/materials',
+      name: 'models',
+      component: Materials
     },
     {
       path: '/predict',

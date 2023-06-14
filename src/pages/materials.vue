@@ -12,16 +12,16 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="organs.html">Organs</a>
+                      <a class="nav-link" @click="routePush('/organs')">Organs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="models.html">Models</a>
+                      <a class="nav-link" @click="routePush('/models')">Models</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="materials.html">Materials</a>
+                      <a class="nav-link" @click="routePush('/materials')">Materials</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://gulab.info/about/">About</a>
@@ -41,7 +41,7 @@
 <body class="sb-nav-fixed">
 
             <div id="layoutSidenav_content">
-                <main style="margin-top:3%">
+                <main>
                     <div class="container-fluid px-4">
                         <h2 class="mt-4">All you need about biomaterials.</h2>
                         <ol class="breadcrumb mb-4">
@@ -552,6 +552,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'models',
   methods:{

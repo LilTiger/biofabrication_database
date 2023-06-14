@@ -10,17 +10,17 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="organs.html">Organs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="models.html">Models</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="materials.html">Materials</a>
-          </li>
+           <li class="nav-item">
+              <a class="nav-link" @click="routePush('/organs')">Organs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" @click="routePush('/models')">Models</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" @click="routePush('/materials')">Materials</a>
+            </li>
             <li class="nav-item">
             <a class="nav-link" href="https://gulab.info/about/">About</a>
           </li>
@@ -47,35 +47,35 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <svg  style='margin-bottom: 400px' class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><image width="100%"  xlink:href='src/assets/images/organ.gif' /></svg>
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><image width="100%"  xlink:href='../../assets/images/organ.gif' /></svg>
 
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Statistics and analysis of organ fabrication research.</h1>
             <p>We aim to establish a mutual-supported platform for biofabrication researchers across the world.</p>
-            <p><a class="btn btn-lg btn-primary" href="organs.html">Learn more</a></p>
+            <p><a class="btn btn-lg btn-primary" @click="routePush('/organs')">Learn more</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><image xlink:href='src/assets/images/model.gif' width="100%"/></svg>
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><image xlink:href='../../assets/images/model.gif' width="100%"/></svg>
 
         <div class="container">
           <div class="carousel-caption">
             <h1>Helpful if you want to construct organs/tissues.</h1>
             <p>We can predict secretion capability by in silico experiments (Liver only).</p>
-            <p><a class="btn btn-lg btn-primary" href="predict.html">Try it</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/predict">Try it</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><image xlink:href='src/assets/images/material.gif' width="100%"/></svg>
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><image xlink:href='../../assets/images/material.gif' width="100%"/></svg>
 
         <div class="container">
           <div class="carousel-caption text-end">
             <h1>Details about biomaterilas and the interaction with fabricated organs/tissues.</h1>
             <p>There are amounts of biomaterials-dominated data and the application areas.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">See details</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/materials">See details</a></p>
           </div>
         </div>
       </div>
@@ -95,8 +95,8 @@
   <div class="container">
 
     <div class="row">
-     <div class="intro" style="border-radius:10px">
-       Manufacturing Multi-organs (MM) database aims to provide the most useful knowledge in biofabrication.
+     <div class="intro" style="width:100%;border-radius:10px">
+       The Manufacturing Multi-organs (MM) database aims to deliver vital biofabrication knowledge.<br>
        <span style="font-size: 20px; font-weight: normal">It demonstrates detailed statistics and analysis based on extensive relevant studies. Furthermore, it also includes user-friendly
        machine learning tools to optimise parameters and predict biological indexes during in vitro organs construction.</span>
      </div>
@@ -120,19 +120,19 @@
             <img class="card-img-top" src="../../assets/images/human.png" style="height:80%; width:80%;" alt="1" usemap="#example-map">
 
             <map name="example-map">
-              <area shape="circle" coords="180,100,80" href="javascript:void(0);" onclick="enterPage('Pharynx And Larynx')" alt="Clickable Area">
-              <area shape="circle" coords="820,480,70" href="javascript:void(0);" onclick="enterPage('Heart')" alt="Clickable Area">
-              <area shape="circle" coords="240,240,70" href="javascript:void(0);" onclick="enterPage('lung')" alt="Clickable Area">
-              <area shape="circle" coords="120,350,90" href="javascript:void(0);" onclick="enterPage('Liver')" alt="Clickable Area">
-              <area shape="circle" coords="210,510,80" href="javascript:void(0);" onclick="enterPage('KIDNEY')" alt="Clickable Area">
-              <area shape="circle" coords="110,670,80" href="javascript:void(0);" onclick="enterPage('PANCREAS')" alt="Clickable Area">
-              <area shape="circle" coords="225,830,85" href="javascript:void(0);" onclick="enterPage('Uninany Bladder')" alt="Clickable Area">
-              <area shape="circle" coords="845,90,85"  href="javascript:void(0);" onclick="enterPage('BRAIN')" alt="Clickable Area">
-              <area shape="circle" coords="800,250,70" href="javascript:void(0);" onclick="enterPage('THYROID GLAND')" alt="Clickable Area">
-              <area shape="circle" coords="915,360,70" href="javascript:void(0);" onclick="enterPage('THYMUS GLAND')" alt="Clickable Area">
-              <area shape="circle" coords="930,590,80" href="javascript:void(0);" onclick="enterPage('STOMACH')" alt="Clickable Area">
-              <area shape="circle" coords="877,757,82" href="javascript:void(0);" onclick="enterPage('INTESTINES')" alt="Clickable Area">
-              <area shape="circle" coords="622,838,65" href="javascript:void(0);" onclick="enterPage('REPRODUCTIVE SYSTEM')" alt="Clickable Area">
+              <area shape="circle" coords="180,100,80" href="javascript:void(0);" @click="enterPage('Pharynx And Larynx')" alt="Clickable Area">
+              <area shape="circle" coords="820,480,70" href="javascript:void(0);" @click="enterPage('Heart')" alt="Clickable Area">
+              <area shape="circle" coords="240,240,70" href="javascript:void(0);" @click="enterPage('lung')" alt="Clickable Area">
+              <area shape="circle" coords="120,350,90" href="javascript:void(0);" @click="enterPage('Liver')" alt="Clickable Area">
+              <area shape="circle" coords="210,510,80" href="javascript:void(0);" @click="enterPage('KIDNEY')" alt="Clickable Area">
+              <area shape="circle" coords="110,670,80" href="javascript:void(0);" @click="enterPage('PANCREAS')" alt="Clickable Area">
+              <area shape="circle" coords="225,830,85" href="javascript:void(0);" @click="enterPage('Uninany Bladder')" alt="Clickable Area">
+              <area shape="circle" coords="845,90,85"  href="javascript:void(0);" @click="enterPage('BRAIN')" alt="Clickable Area">
+              <area shape="circle" coords="800,250,70" href="javascript:void(0);" @click="enterPage('THYROID GLAND')" alt="Clickable Area">
+              <area shape="circle" coords="915,360,70" href="javascript:void(0);" @click="enterPage('THYMUS GLAND')" alt="Clickable Area">
+              <area shape="circle" coords="930,590,80" href="javascript:void(0);" @click="enterPage('STOMACH')" alt="Clickable Area">
+              <area shape="circle" coords="877,757,82" href="javascript:void(0);" @click="enterPage('INTESTINES')" alt="Clickable Area">
+              <area shape="circle" coords="622,838,65" href="javascript:void(0);" @click="enterPage('REPRODUCTIVE SYSTEM')" alt="Clickable Area">
             </map>
 
         </div>
@@ -182,7 +182,7 @@
 <div class="row">
 
   <div class="col-4 d-flex">
-  <a href="organs.html" class="text-decoration-none text-dark"><div class="card flex-fill zoom-card" style="margin-top:8%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+  <a class="text-decoration-none text-dark" style="cursor: pointer;" @click="routePush('/organs')"><div class="card flex-fill zoom-card" style="margin-top:8%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
     <img class="card-img-top" src="../../assets/images/feature-1.png" alt="Card image cap">
     <div class="card-body">
       <h4 class="card-title" style="font-weight: bold">Organs</h4>
@@ -192,7 +192,7 @@
     </div>
 
   <div class="col-4 d-flex">
-  <a href="models.html" class="text-decoration-none text-dark"><div class="card flex-fill zoom-card" style="margin-top:8%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+  <a class="text-decoration-none text-dark" style="cursor: pointer;" @click="routePush('/models')"><div class="card flex-fill zoom-card" style="margin-top:8%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
     <img class="card-img-top" src="../../assets/images/feature-2.png" alt="Card image cap">
     <div class="card-body">
       <h4 class="card-title" style="font-weight: bold">Models</h4>
@@ -202,7 +202,7 @@
   </div>
 
   <div class="col-4 d-flex">
-  <a href="materials.html" class="text-decoration-none text-dark"><div class="card flex-fill zoom-card" style="margin-top:8%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+  <a class="text-decoration-none text-dark" style="cursor: pointer;" @click="routePush('/materials')"><div class="card flex-fill zoom-card" style="margin-top:8%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
     <img class="card-img-top" src="../../assets/images/feature-3.png" alt="Card image cap">
     <div class="card-body">
       <h4 class="card-title" style="font-weight: bold">Materials</h4>
@@ -216,30 +216,30 @@
 <!--knowledge analysis-->
 <div class="card" style="margin-top:2.5%;box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
   <h4 class="card-header" style="font-weight: bold;">
-    <i class="fa-solid fa-magnifying-glass-chart" style="margin-right:1%"></i>Knowledge analysis
+    <i class="fa-solid fa-magnifying-glass-chart" style="margin-right:1%"></i>Knowledge service
   </h4>
   <div class="card-body" style="padding: 36px;">
     <div class="row row-cols-2 g-4">
       <div class="col">
-        <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+        <a style="cursor: pointer;" @click="routePush('/trend')" class="d-flex align-items-center text-decoration-none text-dark">
           <div style="width: 80px;"><i class="fas fa-chart-area fa-4x"></i></div>
           <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">Tendency in the development of Biofabrication</p>
         </a>
       </div>
        <div class="col">
-        <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+        <a  style="cursor: pointer;" @click="routePush('/cooperation')" class="d-flex align-items-center text-decoration-none text-dark">
           <div style="width: 80px;"><i class="fas fa-users fa-4x"></i></div>
           <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">International cooperation among countries, institutions and topics</p>
         </a>
       </div>
       <div class="col">
-        <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+        <a style="cursor: pointer;" @click="routePush('/hostpost')" class="d-flex align-items-center text-decoration-none text-dark">
           <div style="width: 80px;"><i class="fa fa-book fa-fw fa-4x"></i></div>
           <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">Research topics and distribution in Biofabrication</p>
         </a>
       </div>
       <div class="col">
-        <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+        <a style="cursor: pointer;" @click="routePush('/organFunction')" class="d-flex align-items-center text-decoration-none text-dark">
           <div style="width: 80px;"><i class="fas fa-chart-bar fa-4x"></i></div>
           <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">Knowledge mapping of liver function</p>
         </a>
@@ -251,7 +251,7 @@
 <!--    Links-->
 <div class="row">
   <div class="col">
-      <div class="card" style="margin-top:2%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+      <div class="card" style="margin-top:3%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
         <h4 class="card-header" style="font-weight: bold;">
           <i class="fa-solid fa-link" style="margin-right:1%"></i>Links
         </h4>
@@ -274,7 +274,7 @@
       </div>
   </div>
    <div class="col">
-      <div class="card" style="margin-top:2%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+      <div class="card" style="margin-top:3%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
         <h4 class="card-header" style="font-weight: bold;">
           <i class="fa-solid fa-link" style="margin-right:1%"></i>Links
         </h4>
@@ -355,6 +355,7 @@
 import '../../assets/js/jquery-3.6.0.min.js'
 import '../../assets/js/bootstrap.min.js'
 import '../../assets/js/bootstrap.bundle.min.js'
+import "../../assets/js/font-awesome_6.4.0_js_all.min.js"
 
 export default {
   name: 'index',
@@ -371,58 +372,52 @@ export default {
 
 <style lang="less" scoped>
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-.bd-placeholder-a{
-  color: initial;
-  text-decoration: none;
-}
-.bd-placeholder-a:hover{
-  color: initial;
-  text-decoration:underline
-}
+      body{
+      position: relative;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-.intro{
-  font-size: 24px;
-  font-weight: bold;
-  color: #1a1a1a;
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  //max-width: 800px;
-  margin: 20px auto;
-}
-.img-human{
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  object-fit: contain;
-  object-position: center;
-}
+      .intro{
+        font-size: 24px;
+        font-weight: bold;
+        color: #1a1a1a;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 20px auto;
+      }
+      .img-human{
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        object-fit: contain;
+        object-position: center;
+      }
 
-.alert-custom {
-  background-color:#e8f9fa;
-  color: #0c63e4;
-  font-size: 22px;
-  font-weight: bold; /* 浅蓝色背景颜色 */
-}
+      .alert-custom {
+      background-color:#e8f9fa;
+        color: #0c63e4;
+        font-size: 22px;
+        font-weight: bold; /* 浅蓝色背景颜色 */
+      }
 
-.zoom-card{
+      .zoom-card{
         transition: transform .2s; /* Animation */
       }
 

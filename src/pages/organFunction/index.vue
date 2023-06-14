@@ -64,10 +64,10 @@
                   <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                   Collaboration
                 </a>
-                <div class="sb-sidenav-menu-heading">Function assess</div>
+                <div class="sb-sidenav-menu-heading">Knowledge Mapping</div>
                 <a class="nav-link" @click="routePush('/organFunction')">
                   <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
-                  Frequency
+                  Function Assess
                 </a>
 
               </div>
@@ -75,14 +75,14 @@
 
           </nav>
         </div>
-        <div id="layoutSidenav_content">
+        <div id="layoutSidenav_content" style="margin-top:3%">
           <main>
             <div class="frequency container-fluid px-4">
               <div>
                 <el-row :gutter="20" class="chart-cells">
                   <el-col :span="24">
                     <div class="chart-cell">
-                      <div class="chart-title">Frequency</div>
+                      <div class="chart-title">Function Assess</div>
                       <div class="charts">
                         <div class="tree" ref="char" :style="{height:height,width:'100%'}" />
                         <div ref="bar" style="height: 400px; width: 100%"/>
