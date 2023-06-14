@@ -1,10 +1,10 @@
 # The implementation of biofabrication database.
 
-## capital-front-end
+# capital-front-end
 
 > A Vue.js project
 
-### Build Setup
+## Build Setup
 
 ``` bash
 # install dependencies
