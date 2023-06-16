@@ -57,7 +57,7 @@
 
                 <a class="nav-link collapsed" @click="routePush('/hostpost')" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                   <div class="sb-nav-link-icon"><i class="fa fa-book fa-fw"></i></div>
-                  Focus
+                  Hotspot
                 </a>
 
                 <a class="nav-link collapsed" @click="routePush('/cooperation')" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -67,7 +67,7 @@
                 <div class="sb-sidenav-menu-heading">Knowledge Mapping</div>
                 <a class="nav-link" @click="routePush('/organFunction')">
                   <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
-                  Function Assess
+                  Function
                 </a>
 
               </div>
@@ -82,7 +82,7 @@
                 <el-row :gutter="20" class="chart-cells">
                   <el-col :span="24">
                     <div class="chart-cell">
-                      <div class="chart-title">Function Assess</div>
+                      <div class="chart-title">Function</div>
                       <div class="charts">
                         <div class="tree" ref="char" :style="{height:height,width:'100%'}" />
                         <div ref="bar" style="height: 400px; width: 100%"/>

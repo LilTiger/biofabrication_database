@@ -57,7 +57,7 @@
 
               <a class="nav-link collapsed" @click="routePush('/hostpost')" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                 <div class="sb-nav-link-icon"><i class="fa fa-book fa-fw"></i></div>
-                Focus
+                Hotspot
               </a>
 
               <a class="nav-link collapsed"  @click="routePush('/cooperation')" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -67,7 +67,7 @@
               <div class="sb-sidenav-menu-heading">Knowledge mapping</div>
               <a class="nav-link" @click="routePush('/organFunction')">
                 <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
-                Function Assess
+                Function
               </a>
 
             </div>
@@ -98,30 +98,30 @@
               <div class="mb-4 searchDiv">
                 <form class="row g-3 needs-validation" id="form" novalidate onsubmit="return false">
                   <div class="col-4">
-                    <label for="validationCustom0" class="form-label">FirstKeyword</label>
+                    <label for="validationCustom0" class="form-label">Element</label>
                     <select class="form-select" id="validationCustom0" required>
                       <option selected disabled value="">Choose...</option>
                     </select>
                     <div class="invalid-feedback">
-                      Please select a valid FirstKeyword.
+                      Please select a valid Element.
                     </div>
                   </div>
                   <div class="col-3">
-                    <label for="validationCustom1" class="form-label">SecondKeyword</label>
+                    <label for="validationCustom1" class="form-label">General type</label>
                     <select class="form-select" id="validationCustom1" required>
                       <option selected disabled value="">Choose...</option>
                     </select>
                     <div class="invalid-feedback">
-                      Please select a valid SecondKeyword.
+                      Please select a valid General type.
                     </div>
                   </div>
                   <div class="col-3">
-                    <label for="validationCustom2" class="form-label">ThirdKeyword</label>
+                    <label for="validationCustom2" class="form-label">Specific type</label>
                     <select class="form-select" id="validationCustom2" required>
                       <option selected disabled value="">Choose...</option>
                     </select>
                     <div class="invalid-feedback">
-                      Please select a valid ThirdKeyword.
+                      Please select a valid Specific type.
                     </div>
                   </div>
 
