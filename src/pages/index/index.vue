@@ -248,49 +248,81 @@
   </div>
 </div>
 
-<!--    Links-->
-<div class="row">
+<div class="row d-flex" style="align-items: stretch;">
+  <!--    Resources-->
   <div class="col">
-      <div class="card" style="margin-top:3%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+    <div class="card h-100" style="margin-top:3%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
         <h4 class="card-header" style="font-weight: bold;">
-          <i class="fa-solid fa-link" style="margin-right:1%"></i>Links
+            <i class="fa-solid fa-person-chalkboard" style="margin-right:1%"></i>Resources
         </h4>
         <div class="card-body" style="padding: 36px;">
-          <div class="row row-cols-2 g-4">
-            <div class="col d-flex align-items-center justify-content-center">
-              <a href="#"><img src="../../assets/images/PubMed.png" alt="image description" style="width: 200px; height: auto;"/></a>
+            <div class="row align-items-center mb-4">
+                <div class="col-md-5">
+                    <div style="font-size: 20px; font-weight: bold; text-align: justify; color: #2C3E50;">
+                        <i class="fas fa-vial" style="margin-right:1%"></i> Can 3D printing construct organs?
+                    </div>
+                </div>
+                <div class="col-md-7 text-center position-relative">
+                    <a href="https://www.bilibili.com/video/BV1pB4y1R78U/?spm_id_from=333.999.0.0&vd_source=04b0d3c4eb6fde1450654826d8335e08" target="_blank">
+                        <video width="98%" loop autoplay muted style="border-radius: 10px; box-shadow: 0px 3px 6px rgba(0,0,0,0.3);">
+                            <source src="../../assets/images/bioprinting.mp4" type="video/mp4">
+                        </video>
+                      <!-- add a bilibili icon-->
+                        <img src="../../assets/images/bilibili.png" alt="Bilibili" style="position: absolute; top: 2%; left: 7%; width: 30px;">
+                    </a>
+                </div>
             </div>
-            <div class="col d-flex align-items-center justify-content-center">
-              <a href="#"><img src="../../assets/images/NCBI.png" alt="image description" style="width: 200px; height: auto;"/></a>
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div style="font-size: 20px; font-weight: bold; text-align: justify; color: #2C3E50;">
+                        <i class="fas fa-laugh" style="margin-right:1%"></i> Funny 3D printing
+                    </div>
+                </div>
+                <div class="col-md-7 text-center position-relative">
+                    <a href="https://www.bilibili.com/video/BV12U4y11717/?spm_id_from=333.999.0.0&vd_source=04b0d3c4eb6fde1450654826d8335e08" target="_blank">
+                        <video width="98%" loop autoplay muted style="border-radius: 10px; box-shadow: 0px 3px 6px rgba(0,0,0,0.3);">
+                            <source src="../../assets/images/fun-printing.mp4" type="video/mp4">
+                        </video>
+                       <!-- add a bilibili icon-->
+                        <img src="../../assets/images/bilibili.png" alt="Bilibili" style="position: absolute; top: 2%; left: 7%; width: 30px;">
+                    </a>
+                </div>
             </div>
-            <div class="col d-flex align-items-center justify-content-center">
-              <a href="#"><img src="../../assets/images/OOCDB.png" alt="image description" style="width: 100%; height: auto;"/></a>
-            </div>
-            <div class="col d-flex align-items-center justify-content-center">
-              <a href="#"><img src="../../assets/images/BIOMATDB.png" alt="image description" style="width: 100%; height: auto;"/></a>
-            </div>
-          </div>
         </div>
-      </div>
-  </div>
+    </div>
+</div>
+
+<!--  links-->
    <div class="col">
-      <div class="card" style="margin-top:3%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
+      <div class="card h-100" style="margin-top:3%; box-shadow: 5px 5px 15px rgba(0,0,0,0.1); border-radius: 10px;">
         <h4 class="card-header" style="font-weight: bold;">
           <i class="fa-solid fa-link" style="margin-right:1%"></i>Links
         </h4>
         <div class="card-body" style="padding: 36px;">
           <div class="row row-cols-2 g-4">
             <div class="col d-flex align-items-center justify-content-center">
-              <a href="https://pubmed.ncbi.nlm.nih.gov/"><img src="../../assets/images/PubMed.png" alt="image description" style="width: 200px; height: auto;"/></a>
+              <a href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank"><img src="../../assets/images/PubChem.png" alt="image description" style="width: 100%; height: auto;"/></a>
+            </div>
+             <div class="col d-flex align-items-center justify-content-center">
+              <a href="https://biomatdb.eu/" target="_blank"><img src="../../assets/images/BIOMATDB.png" alt="image description" style="width: 100%; height: auto;"/></a>
             </div>
             <div class="col d-flex align-items-center justify-content-center">
-              <a href="https://www.ncbi.nlm.nih.gov/"><img src="../../assets/images/NCBI.png" alt="image description" style="width: 200px; height: auto;"/></a>
+              <a href="https://data.humancellatlas.org/" target="_blank"><img src="../../assets/images/HCA.png" alt="image description" style="width: 100%; height: auto;"/></a>
             </div>
             <div class="col d-flex align-items-center justify-content-center">
-              <a href="http://www.organchip.cn/"><img src="../../assets/images/OOCDB.png" alt="image description" style="width: 100%; height: auto;"/></a>
+              <a href="https://hpscreg.eu/" target="_blank"><img src="../../assets/images/hPSC.png" alt="image description" style="width: 100%; height: auto;"/></a>
             </div>
             <div class="col d-flex align-items-center justify-content-center">
-              <a href="https://biomatdb.eu/"><img src="../../assets/images/BIOMATDB.png" alt="image description" style="width: 100%; height: auto;"/></a>
+              <a href="https://www.allevi3d.com/" target="_blank"><img src="../../assets/images/Allevi.png" alt="image description" style="width: 100%; height: auto;"/></a>
+            </div>
+             <div class="col d-flex align-items-center justify-content-center">
+              <a href="https://www.cellink.com/" target="_blank"><img src="../../assets/images/celllink.png" alt="image description" style="width: 100%; height: auto;"/></a>
+            </div>
+             <div class="col d-flex align-items-center justify-content-center">
+              <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank"><img src="../../assets/images/PubMed.png" alt="image description" style="width: 100%; height: auto;"/></a>
+            </div>
+            <div class="col d-flex align-items-center justify-content-center">
+              <a href="https://www.ncbi.nlm.nih.gov/" target="_blank"><img src="../../assets/images/NCBI.png" alt="image description" style="width: 100%; height: auto;"/></a>
             </div>
           </div>
         </div>
@@ -298,19 +330,9 @@
   </div>
 </div>
 
-
-
-
-
-
-
-    <hr class="featurette-divider">
-
+    <hr class="featurette-divider" style="margin-top:3%">
 
     <!-- /END THE FEATURETTES -->
-
-
-
 
   <!-- FOOTER -->
   <footer class="container">
@@ -333,11 +355,11 @@
 
       <div style="margin-left: 3%">
         <h3><strong>Contact</strong></h3>
-        <p><strong>Address:</strong> #3 Datun Road, Chaoyang District, <br> Beijing 100101, P.R.China</p>
+        <p><strong>Address:</strong> #3 Datun Road, Chaoyang District, Beijing 100101, P.R.China</p>
       <p><strong>Phone:</strong> +86-10-64807315</p>
       <p><strong>Email:</strong> qgu@ioz.ac.cn</p>
       </div>
-      <div style="margin-left: 4%">
+      <div style="margin-left: 2%">
         <h3><strong>Follow us</strong></h3>
           <img style="width:auto; height:132px; " src="../../assets/images/follow.png">
       </div>
