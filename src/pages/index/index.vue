@@ -95,7 +95,7 @@
   <div class="container">
 
     <div class="row">
-     <div class="intro" style="width:100%;border-radius:10px">
+     <div class="intro" style="width:100%;border-radius:10px;margin-top:-3%">
        The Manufacturing Multi-organs (MM) database aims to deliver vital biofabrication knowledge.<br>
        <span style="font-size: 20px; font-weight: normal">It demonstrates detailed statistics and analysis based on extensive relevant studies. Furthermore, it also includes user-friendly
        machine learning tools to optimise parameters and predict biological indexes during in vitro organs construction.</span>
