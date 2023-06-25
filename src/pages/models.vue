@@ -46,7 +46,7 @@
       <div class="card mb-3" style="margin-right:3%; width:46%;float: right">
         <a style="cursor: pointer" @click="routePush('/predict')"><img src="../assets/images/xgboost.png" class="card-img-top" alt="..."></a>
         <div class="card-body">
-          <h3 class="card-title">Liver functional indexes analysis and prediction Model</h3>
+          <h3 class="card-title">Liver functional indexes analysis and prediction model</h3>
           <p class="card-text">The secretion of albumin and urea of in vitro liver can be analysed and predicted as you wish.</p>
           <p class="card-text"><small class="text-muted">Algorithm: XGBoost（eXtreme Gradient Boosting）</small></p>
         </div>
