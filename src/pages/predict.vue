@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div style="flex: 1;">
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -34,6 +35,22 @@
         </div>
       </nav>
     </header>
+    <div style="padding-bottom:80px;">
+     <div class="d-flex flex-column align-items-center mt-5">
+      <h1 class="text-center mb-3" style="margin-top:2%;font-weight: bold">{{ guidanceText }}</h1>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span @click="toggleContent('scaffold')" class="badge rounded-pill text-bg-success" style="cursor:pointer;font-size: 30px">Scaffold-based liver model</span>
+        <span @click="toggleContent('spheroid')" class="badge rounded-pill text-bg-danger" style="cursor:pointer;font-size: 30px">Spheroid-based liver model</span>
+        <span @click="toggleContent('chip')" class="badge rounded-pill text-bg-warning" style="cursor:pointer;font-size: 30px">Liver-on-a-chip liver model</span>
+        <span @click="toggleContent('2D')" class="badge rounded-pill text-bg-info" style="cursor:pointer;font-size: 30px">2D liver model</span>
+      </div>
+    </div>
+     <!-- start of the model content ！-->
+    <div v-if="showContent && selectedBadge === 'scaffold'">
+
+    <!-- start of one of the four liver models !-->
+
+    <!-- 多个相同class的div使用float:left选项  可以实现无缝连接 !-->
 
     <div class="container-fluid" style="margin-top: 5%; margin-left:2%; width: 30%; height: 30%; float:left">
       <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
@@ -55,6 +72,23 @@
         </div>
         <div class="form-text">The number of seeded cells.</div>
       </div>
+
+      <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the co-cultured cells (if applicable).</div>
+    </div>
+
+     <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell Seeding (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cu-cultured cells (if applicable).</div>
+    </div>
 
     </div>
 
@@ -155,14 +189,379 @@
 
     </div>
 
-
-
-    <!-- 多个相同class的div使用float:left选项  可以实现无缝连接 !-->
     <div class="container-fluid" style="float:left">
       <p style="text-align: center; margin-top:2%"><button type="button" class="btn btn-primary">Submit</button></p>
     </div>
-    <div style="width:100%;">
-      <footer class="py-4 bg-light mt-auto" style="text-align: center; padding-left:3%; width:100%; position: fixed; bottom: 0">
+
+    <!-- end of one of the four liver models !-->
+    </div>
+
+    <div v-if="showContent && selectedBadge === 'spheroid'">
+
+  <!-- start of one of the four liver models !-->
+
+  <!-- 多个相同class的div使用float:left选项  可以实现无缝连接 !-->
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:12%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Cell Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Cell</span>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">The type of the cells.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Cell Seeding</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cells.</div>
+    </div>
+
+     <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the co-cultured cells (if applicable).</div>
+    </div>
+
+     <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell Seeding (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cu-cultured cells (if applicable).</div>
+    </div>
+
+
+  </div>
+
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:12%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Diameter</span>
+        <input type="text" class="form-control"  aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">The diameter of the spheroids.</div>
+    </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" >Tethered</span>
+          <input type="text" class="form-control"  aria-describedby="basic-addon3">
+        </div>
+        <div class="form-text">Whether the spheroids are tethered onto a film.</div>
+      </div>
+
+     <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" >Tethered Film</span>
+          <input type="text" class="form-control"  aria-describedby="basic-addon3">
+        </div>
+        <div class="form-text">The type of the tethered film (if applicable).</div>
+      </div>
+
+    <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text" >Modification</span>
+          <input type="text" class="form-control"  aria-describedby="basic-addon3">
+        </div>
+        <div class="form-text">The modification type of the medium.</div>
+      </div>
+
+   <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Flow Rate</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(μL/min)</span>
+      </div>
+      <div class="form-text">The flow rate of the culture system (set to 0 if a static culture is available).</div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid" style="float:left">
+    <p style="text-align: center; margin-top:2%"><button type="button" class="btn btn-primary">Submit</button></p>
+  </div>
+
+  <!-- end of one of the four liver models !-->
+  </div>
+
+    <div v-if="showContent && selectedBadge === 'chip'">
+
+  <!-- start of one of the four liver models !-->
+
+  <!-- 多个相同class的div使用float:left选项  可以实现无缝连接 !-->
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:2%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Cell Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Cell</span>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">The type of the cells.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Cell Seeding</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cells.</div>
+    </div>
+
+    <div class="input-group mb-3">
+    <div class="input-group">
+      <span class="input-group-text">Co-cultured Cell (optional)</span>
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+    </div>
+    <div class="form-text">The type of the co-cultured cells (if applicable).</div>
+    </div>
+
+     <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell Seeding (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cu-cultured cells (if applicable).</div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:3%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center "><img src="../assets/images/material.svg" alt='cell' style="width:50%"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Material Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Material</span>
+        <input type="text" class="form-control" aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">The material usd to culture cells.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Material Concentration</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(wt%)</span>
+      </div>
+      <div class="form-text">The concentration of the material.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Modification</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The concentration of the material.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Modification Concentration</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(wt%)</span>
+      </div>
+      <div class="form-text">The concentration of the modification.</div>
+    </div>
+
+     <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Medium-out</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the medium in outer channel.</div>
+    </div>
+
+      <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Medium-in</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the medium in inner channel (available only under multi-organ culture).</div>
+    </div>
+
+      <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Serum-out</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the serum in outer channel.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Serum-in</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the serum in inner channel (available only under multi-organ culture).</div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:3%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Self-circulated</span>
+        <input type="text" class="form-control"  aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">Whether the chip system is self-circulated.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Multi-organs Culture</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">Whether multiple organs are cultured in the chip system.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Homogeneous Medium</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">Whether the medium is homogeneous.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Flow Rate</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(μL/min)</span>
+      </div>
+      <div class="form-text">The flow rate of the chip system (set to 0 if a static culture is available).</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Shear Stress</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(dyn/cm^2)</span>
+      </div>
+      <div class="form-text">The shear stress of the fluid on the cells.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Channel Width</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The width of the channel.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Physical Stimulation</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The physical stimulation type of the chip system.</div>
+    </div>
+
+
+  </div>
+
+  <div class="container-fluid" style="float:left">
+    <p style="text-align: center; margin-top:2%"><button type="button" class="btn btn-primary">Submit</button></p>
+  </div>
+
+  <!-- end of one of the four liver models !-->
+  </div>
+
+    <div v-if="showContent && selectedBadge === '2D'">
+
+  <!-- start of one of the four liver models !-->
+
+  <!-- 多个相同class的div使用float:left选项  可以实现无缝连接 !-->
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:12%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Cell Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Cell</span>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">The type of the cells.</div>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Cell Seeding</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cells.</div>
+    </div>
+
+      <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+      <div class="form-text">The type of the co-cultured cells (if applicable).</div>
+    </div>
+
+     <div class="input-group mb-3">
+      <div class="input-group">
+        <span class="input-group-text">Co-cultured Cell Seeding (optional)</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">(10^6)</span>
+      </div>
+      <div class="form-text">The number of seeded cu-cultured cells (if applicable).</div>
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid" style="margin-top: 5%; margin-left:12%; width: 30%; height: 30%; float:left">
+    <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
+
+    <div class="mb-3">
+      <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+      <div class="input-group">
+        <span class="input-group-text" >Coat</span>
+        <input type="text" class="form-control"  aria-describedby="basic-addon3">
+      </div>
+      <div class="form-text">The type of the coated layer.</div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid" style="float:left">
+    <p style="text-align: center; margin-top:2%"><button type="button" class="btn btn-primary">Submit</button></p>
+  </div>
+
+  <!-- end of one of the four liver models !-->
+  </div>
+
+    <!-- end of the model content ！-->
+  </div>
+
+</div>
+ <div style="width:100%;">
+      <footer class="py-4 bg-light mt-auto" style="text-align: center; padding-left:3%; width:100%;">
         <div class="container-fluid px-4">
           <div class="d-flex align-items-center justify-content-between small">
             <div class="text-muted">Copyright &copy; Group of Bioinspired Engineering 2023</div>
@@ -176,12 +575,26 @@
 <script>
 export default {
   name: 'predict',
-  methods:{
+  data() {
+    return {
+      showContent: false,
+      guidanceText: 'Please select the liver model:',
+      selectedBadge: null,  // 新添加的属性
+    };
+  },
+  methods: {
     routePush(path){
       this.$router.push({ path:path })
+    },
+    toggleContent(badge) {  // 添加了参数 badge
+      this.showContent = !this.showContent;
+      this.selectedBadge = badge;  // 更新 selectedBadge 的值
+      this.guidanceText = this.showContent ?
+        'Input the parameters and click the submit button to see the secretion line chart.' :
+        'Please select the liver model:';
     }
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
@@ -200,4 +613,7 @@ export default {
     font-size: 3.5rem;
   }
 }
+
 </style>
+
+
