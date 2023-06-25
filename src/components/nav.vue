@@ -20,7 +20,7 @@ export default {
       list: [
         { label: '科技发展趋势分析', value: '/trend' },
         { label: '国际合作分析', value: '/cooperation' },
-        { label: '科技领域研究热点聚焦分析', value: '/hostpost' }
+        { label: '科技领域研究热点聚焦分析', value: '/hotspot' }
       ]
     }
   },

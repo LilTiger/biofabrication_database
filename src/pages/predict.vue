@@ -37,15 +37,31 @@
     </header>
     <div style="padding-bottom:80px;">
      <div class="d-flex flex-column align-items-center mt-5">
+       <transition name="fade">
       <h1 class="text-center mb-3" style="margin-top:2%;font-weight: bold">{{ guidanceText }}</h1>
+       </transition>
       <div class="d-flex flex-wrap justify-content-center gap-3">
-        <span @click="toggleContent('scaffold')" class="badge rounded-pill text-bg-success" style="cursor:pointer;font-size: 30px">Scaffold-based liver model</span>
-        <span @click="toggleContent('spheroid')" class="badge rounded-pill text-bg-danger" style="cursor:pointer;font-size: 30px">Spheroid-based liver model</span>
-        <span @click="toggleContent('chip')" class="badge rounded-pill text-bg-warning" style="cursor:pointer;font-size: 30px">Liver-on-a-chip liver model</span>
-        <span @click="toggleContent('2D')" class="badge rounded-pill text-bg-info" style="cursor:pointer;font-size: 30px">2D liver model</span>
+        <span
+          @click="toggleContent('scaffold')"
+          :class="{'badge rounded-pill text-bg-success': clickedBadge == 'scaffold', 'badge rounded-pill': clickedBadge != 'scaffold'}"
+          style="cursor:pointer;font-size: 30px; transition: background-color 0.3s ease">Scaffold-based liver model</span>
+        <span
+          @click="toggleContent('spheroid')"
+          :class="{'badge rounded-pill text-bg-danger': clickedBadge == 'spheroid', 'badge rounded-pill': clickedBadge != 'spheroid'}"
+          style="cursor:pointer;font-size: 30px; transition: background-color 0.3s ease" >Spheroid-based liver model</span>
+        <span
+          @click="toggleContent('chip')"
+          :class="{'badge rounded-pill text-bg-warning': clickedBadge == 'chip', 'badge rounded-pill': clickedBadge != 'chip'}"
+          style="cursor:pointer;font-size: 30px; transition: background-color 0.3s ease">Liver-on-a-chip liver model</span>
+        <span
+          @click="toggleContent('2D')"
+          :class="{'badge rounded-pill text-bg-info': clickedBadge == '2D', 'badge rounded-pill': clickedBadge != '2D'}"
+          style="cursor:pointer;font-size: 30px; transition: background-color 0.3s ease">2D liver model</span>
       </div>
     </div>
      <!-- start of the model content ！-->
+
+      <transition name="fade">
     <div v-if="showContent && selectedBadge === 'scaffold'">
 
     <!-- start of one of the four liver models !-->
@@ -56,7 +72,7 @@
       <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
 
       <div class="mb-3">
-        <label for="basic-url" class="form-label">Cell Parameters</label>
+        <label for="basic-url" class="form-label"><strong>Cell Parameters</strong></label>
         <div class="input-group">
           <span class="input-group-text" >Cell</span>
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -96,7 +112,7 @@
       <p style="text-align: center "><img src="../assets/images/material.svg" alt='cell' style="width:50%"></p>
 
       <div class="mb-3">
-        <label for="basic-url" class="form-label">Material Parameters</label>
+        <label for="basic-url" class="form-label"><strong>Material Parameters</strong></label>
         <div class="input-group">
           <span class="input-group-text" >Scaffold</span>
           <input type="text" class="form-control" aria-describedby="basic-addon3">
@@ -155,7 +171,7 @@
       <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
 
       <div class="mb-3">
-        <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+        <label for="basic-url" class="form-label"><strong>Culture Platform Parameters</strong></label>
         <div class="input-group">
           <span class="input-group-text" >Design</span>
           <input type="text" class="form-control"  aria-describedby="basic-addon3">
@@ -195,7 +211,9 @@
 
     <!-- end of one of the four liver models !-->
     </div>
+      </transition>
 
+      <transition name="fade">
     <div v-if="showContent && selectedBadge === 'spheroid'">
 
   <!-- start of one of the four liver models !-->
@@ -206,7 +224,7 @@
     <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Cell Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Cell Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Cell</span>
         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -248,10 +266,11 @@
     <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Culture Platform Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Diameter</span>
         <input type="text" class="form-control"  aria-describedby="basic-addon3">
+         <span class="input-group-text">(μm)</span>
       </div>
       <div class="form-text">The diameter of the spheroids.</div>
     </div>
@@ -297,7 +316,9 @@
 
   <!-- end of one of the four liver models !-->
   </div>
+      </transition>
 
+      <transition name="fade">
     <div v-if="showContent && selectedBadge === 'chip'">
 
   <!-- start of one of the four liver models !-->
@@ -308,7 +329,7 @@
     <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Cell Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Cell Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Cell</span>
         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -348,7 +369,7 @@
     <p style="text-align: center "><img src="../assets/images/material.svg" alt='cell' style="width:50%"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Material Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Material Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Material</span>
         <input type="text" class="form-control" aria-describedby="basic-addon3">
@@ -395,7 +416,7 @@
         <span class="input-group-text">Medium-in</span>
         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
       </div>
-      <div class="form-text">The type of the medium in inner channel (available only under multi-organ culture).</div>
+      <div class="form-text">The type of the medium in inner channel (available only under multi-organs culture).</div>
     </div>
 
       <div class="input-group mb-3">
@@ -411,7 +432,7 @@
         <span class="input-group-text">Serum-in</span>
         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
       </div>
-      <div class="form-text">The type of the serum in inner channel (available only under multi-organ culture).</div>
+      <div class="form-text">The type of the serum in inner channel (available only under multi-organs culture).</div>
     </div>
 
   </div>
@@ -420,7 +441,7 @@
     <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Culture Platform Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Self-circulated</span>
         <input type="text" class="form-control"  aria-describedby="basic-addon3">
@@ -487,7 +508,9 @@
 
   <!-- end of one of the four liver models !-->
   </div>
+      </transition>
 
+      <transition name="fade">
     <div v-if="showContent && selectedBadge === '2D'">
 
   <!-- start of one of the four liver models !-->
@@ -498,7 +521,7 @@
     <p style="text-align: center"><img src="../assets/images/cell.svg" alt='cell' style="width:50%;"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Cell Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Cell Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Cell</span>
         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
@@ -539,7 +562,7 @@
     <p style="text-align: center;"><img src="../assets/images/chip.svg" alt='cell' style="width:50%"></p>
 
     <div class="mb-3">
-      <label for="basic-url" class="form-label">Culture Platform Parameters</label>
+      <label for="basic-url" class="form-label"><strong>Culture Platform Parameters</strong></label>
       <div class="input-group">
         <span class="input-group-text" >Coat</span>
         <input type="text" class="form-control"  aria-describedby="basic-addon3">
@@ -555,6 +578,7 @@
 
   <!-- end of one of the four liver models !-->
   </div>
+      </transition>
 
     <!-- end of the model content ！-->
   </div>
@@ -579,16 +603,23 @@ export default {
     return {
       showContent: false,
       guidanceText: 'Please select the liver model:',
-      selectedBadge: null,  // 新添加的属性
+      selectedBadge: null,
+      clickedBadge: null,  // 新添加的属性
     };
   },
   methods: {
     routePush(path){
       this.$router.push({ path:path })
     },
-    toggleContent(badge) {  // 添加了参数 badge
-      this.showContent = !this.showContent;
-      this.selectedBadge = badge;  // 更新 selectedBadge 的值
+    toggleContent(badge) {
+      if (this.clickedBadge === badge) {
+        this.clickedBadge = null; // 如果点击的是同一个 badge，就将 clickedBadge 设置为 null
+      } else {
+        this.clickedBadge = badge; // 否则更新 clickedBadge
+      }
+
+      this.showContent = this.clickedBadge !== null;
+      this.selectedBadge = badge;
       this.guidanceText = this.showContent ?
         'Input the parameters and click the submit button to see the secretion line chart.' :
         'Please select the liver model:';
@@ -596,6 +627,8 @@ export default {
   }
 };
 </script>
+
+
 
 <style lang="less" scoped>
 @import "../assets/css/carousel.css";
@@ -612,6 +645,21 @@ export default {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+.badge {
+  background-color: grey;
+}
+
+.badge:active {
+  background-color: inherit; /* 这会使元素回到其默认的颜色 */
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 </style>

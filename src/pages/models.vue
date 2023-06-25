@@ -34,7 +34,7 @@
         </div>
       </nav>
     </header>
-    <div style="position: relative; margin-top:9%">
+    <div style="position: relative; margin-top:10%">
       <div class="card mb-3" style="margin-left: 3%; width: 46%; float:left">
         <a style="cursor: pointer" @click="routePush('/print')"><img src="../assets/images/models.png" style='width:89.8%' class="card-img-top" alt="..."></a>
         <div class="card-body">

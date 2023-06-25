@@ -62,7 +62,7 @@ export default new VueRouter({
       component: Cooperation
     },
     {
-      path: '/hostpost',
+      path: '/hotspot',
       name: 'hotspot',
       component: Hotspot
     },

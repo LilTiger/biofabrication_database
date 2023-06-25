@@ -55,7 +55,7 @@
                   Tendency
                 </a>
 
-                <a class="nav-link collapsed" @click="routePush('/hostpost')" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                <a class="nav-link collapsed" @click="routePush('/hotspot')" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                   <div class="sb-nav-link-icon"><i class="fa fa-book fa-fw"></i></div>
                   Hotspot
                 </a>

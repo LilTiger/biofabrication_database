@@ -233,7 +233,7 @@
         </a>
       </div>
       <div class="col">
-        <a style="cursor: pointer;" @click="routePush('/hostpost')" class="d-flex align-items-center text-decoration-none text-dark">
+        <a style="cursor: pointer;" @click="routePush('/hotspot')" class="d-flex align-items-center text-decoration-none text-dark">
           <div style="width: 80px;"><i class="fa fa-book fa-fw fa-4x"></i></div>
           <p class="h5 ms-3 mb-0" style="font-size: 22px; font-family: Arial, sans-serif;">Research topics and distribution in Biofabrication</p>
         </a>
@@ -345,10 +345,10 @@
         <div style="margin-left: 1%">
           <img src="../../assets/images/stemcell.png" style="width:150px">
         </div>
-         <div style="margin-left: 2%">
+         <div style="margin-left: 1%">
           <img src="../../assets/images/ioz.png" style="width:150px">
         </div>
-         <div style="margin-left: 2%; margin-top:1.5%">
+         <div style="margin-left: 1%; margin-top:1.5%">
           <img src="../../assets/images/dake.png" style="width:150px">
         </div>
 
