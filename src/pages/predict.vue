@@ -623,12 +623,16 @@ export default {
       this.guidanceText = this.showContent ?
         'Input the parameters and click the submit button to see the secretion line chart.' :
         'Please select the liver model:';
+
+        let textElement = document.querySelector('.text-center');
+          textElement.style.color = 'gray'; // 中间色
+          setTimeout(() => {
+            textElement.style.color = 'black'; // 最终色
+          }, 300); // 等待0.5秒
     }
   }
 };
 </script>
-
-
 
 <style lang="less" scoped>
 @import "../assets/css/carousel.css";
@@ -650,18 +654,18 @@ export default {
 .badge {
   background-color: grey;
 }
-
 .badge:active {
   background-color: inherit; /* 这会使元素回到其默认的颜色 */
 }
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-
+.text-center {
+  transition: color 0.5s ease;
+}
 </style>
 
 

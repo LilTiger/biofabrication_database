@@ -539,13 +539,15 @@
                         </div>
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
+                 <div style="width:100%;">
+                    <footer class="py-4 bg-light mt-auto" style="text-align: center; padding-left:3%; width:100%; position: fixed; bottom: 0">
+                      <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Group of Bioinspired Engineering 2023</div>
+                          <div class="text-muted">Copyright &copy; Group of Bioinspired Engineering 2023</div>
                         </div>
-                    </div>
-                </footer>
+                      </div>
+                    </footer>
+                  </div>
             </div>
     </body>
   </div>
